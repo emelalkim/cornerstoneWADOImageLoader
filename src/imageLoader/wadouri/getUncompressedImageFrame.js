@@ -5,10 +5,9 @@ import unpackBinaryFrame from './unpackBinaryFrame.js';
  */
 
 function getUncompressedImageFrame(dataSet, frameIndex) {
-
-  console.log(" -----> ");
-  console.log(" getUncompressedImageFrame - GITHUB WADO ");
-  console.log(" -----> ");
+  console.log(' -----> ');
+  console.log(' getUncompressedImageFrame - GITHUB WADO ');
+  console.log(' -----> ');
 
   const pixelDataElement =
     dataSet.elements.x7fe00010 || dataSet.elements.x7fe00008;
@@ -45,8 +44,6 @@ function getUncompressedImageFrame(dataSet, frameIndex) {
       See http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.6.3.html for more information.`
     );
   }
-
-
 
   const pixelDataOffset = pixelDataElement.dataOffset;
   const pixelsPerFrame = rows * columns * samplesPerPixel;
