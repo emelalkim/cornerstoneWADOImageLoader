@@ -47,6 +47,10 @@ const cornerstoneWADOImageLoader = {
   external,
 };
 
+console.log(" -----> ");
+console.log(" GITHUB WADO ");
+console.log(" -----> ");
+
 export {
   convertRGBColorByPixel,
   convertRGBColorByPlane,
