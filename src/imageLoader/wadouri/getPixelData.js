@@ -21,7 +21,7 @@ function getPixelData(dataSet, frameIndex = 0) {
     return getEncapsulatedImageFrame(dataSet, frameIndex);
   }
 
-  return getUncompressedImageFrame(dataSet, frameIndex); git
+  return getUncompressedImageFrame(dataSet, frameIndex);
 }
 
 export default getPixelData;
