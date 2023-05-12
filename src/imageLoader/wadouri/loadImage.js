@@ -28,6 +28,7 @@ function loadImageFromPromise(
     cancelFn: undefined,
   };
 
+  console.log(' --> loadImageFromPromise wadouri');
   imageLoadObject.promise = new Promise((resolve, reject) => {
     dataSetPromise.then(
       (dataSet /* , xhr*/) => {
@@ -89,6 +90,8 @@ function loadImageFromDataSet(
 ) {
   const start = new Date().getTime();
 
+  console.log(' --> loadImageFromDataSet wadouri');
+
   const promise = new Promise((resolve, reject) => {
     const loadEnd = new Date().getTime();
 
@@ -135,6 +138,7 @@ function getLoaderForScheme(scheme) {
 }
 
 function loadImage(imageId, options = {}) {
+  console.log(' loadImage in wadouri');
   const parsedImageId = parseImageId(imageId);
 
   options = Object.assign({}, options);
