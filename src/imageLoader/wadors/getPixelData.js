@@ -48,7 +48,7 @@ function getPixelData(uri, imageId, mediaType = 'application/octet-stream') {
       const contentType =
         xhr.getResponseHeader('Content-Type') || 'application/octet-stream';
 
-      console.log(' --> contentType', contentType)
+      console.log(' --> contentType', contentType);
 
       if (contentType.indexOf('multipart') === -1) {
         resolve({
