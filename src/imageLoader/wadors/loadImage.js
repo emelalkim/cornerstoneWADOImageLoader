@@ -70,6 +70,7 @@ function getImageRetrievalPool() {
 }
 
 function loadImage(imageId, options = {}) {
+  console.log(' ---> wadors loadImage')
   const imageRetrievalPool = getImageRetrievalPool();
 
   const start = new Date().getTime();
