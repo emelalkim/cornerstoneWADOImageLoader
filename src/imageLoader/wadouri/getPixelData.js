@@ -8,17 +8,20 @@ function getPixelData(dataSet, frameIndex = 0) {
 
   if (!pixelDataElement) {
     console.log(' --- No pixel data returns null ---');
+
     return null;
   }
 
-  console.log(' ----> !!pixelDataElement.encapsulatedPixelData', Boolean(pixelDataElement.encapsulatedPixelData));
+  console.log(' ----> !!pixelDataElement.encapsulatedPixelData');
+  console.log(Boolean(pixelDataElement.encapsulatedPixelData));
 
   if (pixelDataElement.encapsulatedPixelData) {
     console.log(' ===> passed in if !!pixelDataElement.encapsulatedPixelData');
+
     return getEncapsulatedImageFrame(dataSet, frameIndex);
   }
 
-  return getUncompressedImageFrame(dataSet, frameIndex);
+  return getUncompressedImageFrame(dataSet, frameIndex); git
 }
 
 export default getPixelData;
