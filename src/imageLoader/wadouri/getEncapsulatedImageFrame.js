@@ -7,7 +7,6 @@ import external from '../../externalModules.js';
 function framesAreFragmented(dataSet) {
   const numberOfFrames = dataSet.intString('x00280008');
   const pixelDataElement = dataSet.elements.x7fe00010;
-
   return numberOfFrames !== pixelDataElement.fragments.length;
 }
 
