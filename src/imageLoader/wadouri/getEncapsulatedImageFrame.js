@@ -17,6 +17,7 @@ export default function getEncapsulatedImageFrame(dataSet, frameIndex) {
     dataSet.elements.x7fe00010 &&
     dataSet.elements.x7fe00010.basicOffsetTable.length
   ) {
+    console.log(" ----> first if is true")
     // Basic Offset Table is not empty
     return dicomParser.readEncapsulatedImageFrame(
       dataSet,
@@ -28,6 +29,7 @@ export default function getEncapsulatedImageFrame(dataSet, frameIndex) {
   // Empty basic offset table
 
   if (framesAreFragmented(dataSet)) {
+    console.log(" ----> framesAreFragmented true")
     const basicOffsetTable = dicomParser.createJPEGBasicOffsetTable(
       dataSet,
       dataSet.elements.x7fe00010
