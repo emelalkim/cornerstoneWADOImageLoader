@@ -64,7 +64,8 @@ function update(uri, dataSet) {
 
 // loads the dicom dataset from the wadouri sp
 function load(uri, loadRequest = xhrRequest, imageId) {
-  console.log(' %%%%%%% Datasetcachemanager - load: ', uri, loadRequest, imageId);
+  console.log(' %%%%%%% Datasetcachemanager - load: ');
+  console.log(uri, loadRequest, imageId);
   const { cornerstone, dicomParser } = external;
 
   // if already loaded return it right away

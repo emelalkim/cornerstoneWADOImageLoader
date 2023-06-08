@@ -95,7 +95,6 @@ function loadImageFromDataSet(
   const promise = new Promise((resolve, reject) => {
     const loadEnd = new Date().getTime();
 
-
     let imagePromise;
 
     try {
@@ -153,7 +152,7 @@ function loadImage(imageId, options = {}) {
 
   // if the dataset for this url is already loaded, use it
   if (dataSetCacheManager.isLoaded(parsedImageId.url)) {
-    console.log(" --> loadImage in if cacheLoaded passes");
+    console.log(' --> loadImage in if cacheLoaded passes');
     const dataSet = dataSetCacheManager.get(parsedImageId.url, loader, imageId);
 
     return loadImageFromDataSet(
