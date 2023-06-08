@@ -8,6 +8,8 @@ function xhrRequest(
   params = {},
   customOptions = null
 ) {
+  console.log(" ----> xhrRequest url", url);
+  console.log(" ----> xhrRequest imageid", url);
   const { cornerstone } = external;
   const options = customOptions || getOptions();
 

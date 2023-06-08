@@ -90,10 +90,11 @@ function loadImageFromDataSet(
 ) {
   const start = new Date().getTime();
 
-  console.log(' --> loadImageFromDataSet wadouri');
+  console.log(' --> loadImageFromDataSet wadouri frame: ', frame);
 
   const promise = new Promise((resolve, reject) => {
     const loadEnd = new Date().getTime();
+
 
     let imagePromise;
 
@@ -138,8 +139,8 @@ function getLoaderForScheme(scheme) {
 }
 
 function loadImage(imageId, options = {}) {
-  console.log(' loadImage in wadouri');
   const parsedImageId = parseImageId(imageId);
+  console.log(' loadImage in wadouri parsedImageId:', parsedImageId);
 
   options = Object.assign({}, options);
   let loader = options.loader;
@@ -152,6 +153,7 @@ function loadImage(imageId, options = {}) {
 
   // if the dataset for this url is already loaded, use it
   if (dataSetCacheManager.isLoaded(parsedImageId.url)) {
+    console.log(" --> loadImage in if cacheLoaded passes");
     const dataSet = dataSetCacheManager.get(parsedImageId.url, loader, imageId);
 
     return loadImageFromDataSet(
