@@ -6,7 +6,7 @@ import unpackBinaryFrame from './unpackBinaryFrame.js';
 
 function getUncompressedImageFrame(dataSet, frameIndex) {
   console.log(' -----> ');
-  console.log(' getUncompressedImageFrame - GITHUB WADO ');
+  console.log(' getUncompressedImageFrame - GITHUB WADO frameIndex:', frameIndex);
   console.log(' -----> ');
 
   const pixelDataElement =

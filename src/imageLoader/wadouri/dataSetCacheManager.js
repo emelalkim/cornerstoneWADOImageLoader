@@ -24,6 +24,8 @@ function isLoaded(uri) {
 function get(uri) {
   let dataSet;
 
+  console.log(" +++++ Datasetcachemanager, uri:", uri);
+
   if (uri.includes('&frame=')) {
     const { frame, dataSet: multiframeDataSet } =
       multiframeDataset.retrieveMultiframeDataset(uri);
@@ -62,6 +64,7 @@ function update(uri, dataSet) {
 
 // loads the dicom dataset from the wadouri sp
 function load(uri, loadRequest = xhrRequest, imageId) {
+  console.log(" %%%%%%% Datasetcachemanager - load: ", uri, loadRequest, imageId);
   const { cornerstone, dicomParser } = external;
 
   // if already loaded return it right away
