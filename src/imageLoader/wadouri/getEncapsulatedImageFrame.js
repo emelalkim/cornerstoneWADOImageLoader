@@ -5,7 +5,7 @@ import external from '../../externalModules.js';
  */
 
 function framesAreFragmented(dataSet) {
-  //TODO: getPixelData pases frameIndex
+  //TODO-epad: getPixelData pases frameIndex
   const numberOfFrames = dataSet.intString('x00280008');
   const pixelDataElement = dataSet.elements.x7fe00010;
   return numberOfFrames !== pixelDataElement.fragments.length;
@@ -28,7 +28,7 @@ export default function getEncapsulatedImageFrame(dataSet, frameIndex) {
   }
 
   // Empty basic offset table
-
+  //TODO-epad: What does 'framesAreFragmented' mean?
   if (framesAreFragmented(dataSet)) {
     console.log(' ----> framesAreFragmented true');
     const basicOffsetTable = dicomParser.createJPEGBasicOffsetTable(
